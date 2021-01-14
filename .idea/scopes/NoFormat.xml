@@ -1,0 +1,3 @@
+<component name="DependencyValidationManager">
+  <scope name="NoFormat" pattern="file:pslam-baseline.xml||file:tools/*" />
+</component>

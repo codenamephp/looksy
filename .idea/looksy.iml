@@ -8,6 +8,8 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/squizlabs/php_codesniffer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/phpcompatibility/php-compatibility" />
+      <excludeFolder url="file://$MODULE_DIR$/.cache" />
+      <excludeFolder url="file://$MODULE_DIR$/.logs" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
