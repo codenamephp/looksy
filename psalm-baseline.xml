@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<files psalm-version="4.x-dev@">
+  <file src="src/rawData/xdebug/Collector.php">
+    <AssignmentToVoid occurrences="1">
+      <code>$this-&gt;lastTraceFilename</code>
+    </AssignmentToVoid>
+    <InvalidCast occurrences="1">
+      <code>xdebug_stop_trace()</code>
+    </InvalidCast>
+    <InvalidPropertyAssignmentValue occurrences="1">
+      <code>xdebug_start_trace($this-&gt;traceFileName, $this-&gt;options)</code>
+    </InvalidPropertyAssignmentValue>
+  </file>
+</files>
