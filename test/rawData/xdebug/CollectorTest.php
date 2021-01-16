@@ -23,20 +23,22 @@ use PHPUnit\Framework\TestCase;
 
 final class CollectorTest extends TestCase {
 
-  private Collector $sut;
-
   public static ?string $start_expectedFilename = null;
+
   public static ?string $start_expectedReturnFilename = null;
+
   public static ?int $start_expectedOptions = null;
 
   public static string|false $stop_expectedFilename = false;
+
+  private Collector $sut;
 
   protected function setUp() : void {
     $this->sut = new Collector();
 
     self::$start_expectedFilename = null;
     self::$start_expectedReturnFilename = null;
-    self::$start_expectedOptions = null;
+    self::$start_expectedOptions = XDEBUG_TRACE_COMPUTERIZED;
     self::$stop_expectedFilename = false;
   }
 
@@ -66,6 +68,7 @@ final class CollectorTest extends TestCase {
     self::assertEquals(__FILE__, $metaData['uri']);
     self::assertEquals('rb', $metaData['mode']);
   }
+
   public function testStop_canThrowException_ifReturnedFileIsNotReadable() : void {
     self::$stop_expectedFilename = false;
     $this->expectException(DataCollectionFailedException::class);

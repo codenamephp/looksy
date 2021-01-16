@@ -11,7 +11,7 @@
   ],
   "require": {
     "php": "^8.0",
-    "ext-xdebug": "*"
+    "ext-xdebug": "^3"
   },
   "require-dev": {
     "dealerdirect/phpcodesniffer-composer-installer": "^0.7",

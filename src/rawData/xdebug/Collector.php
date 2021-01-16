@@ -20,12 +20,12 @@ final class Collector implements iCollector {
   public ?string $lastTraceFilename = null;
 
   /**
-   * @param string|null $traceFileName The file name the trace will be saved to as accepted by xdebug_start_trace
-   * @param int|null $options The options to start the trace with as accepted by xdebug_start_trace
+   * @param string $traceFileName The file name the trace will be saved to as accepted by xdebug_start_trace
+   * @param int $options The options to start the trace with as accepted by xdebug_start_trace
    *
    * @see https://xdebug.org/docs/all_functions#xdebug_start_trace
    */
-  public function __construct(public ?string $traceFileName = null, public ?int $options = null) { }
+  public function __construct(public string $traceFileName = '', public int $options = XDEBUG_TRACE_COMPUTERIZED) { }
 
   /**
    * @inheritDoc
