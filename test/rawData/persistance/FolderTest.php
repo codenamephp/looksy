@@ -4,6 +4,7 @@ namespace de\codenamephp\looksy\test\rawData\persistance;
 
 use de\codenamephp\looksy\rawData\iRawData;
 use de\codenamephp\looksy\rawData\persistance\Folder;
+use de\codenamephp\looksy\rawData\persistance\SavingFailedException;
 use org\bovigo\vfs\vfsStream;
 use PHPUnit\Framework\TestCase;
 
@@ -57,6 +58,15 @@ final class FolderTest extends TestCase {
     self::assertSame(0, ftell($rawData1->getStream()));
     self::assertSame(0, ftell($rawData2->getStream()));
     self::assertSame(0, ftell($rawData3->getStream()));
+  }
+
+  public function testSave_canThrowException_ifFolderCouldNotBeCreated() : void {
+    $this->sut->folder = '/etc/do/not/write/here';
+
+    $this->expectException(SavingFailedException::class);
+    $this->expectDeprecationMessage('Could not create folder ' . $this->sut->folder);
+
+    $this->sut->save($this->createMock(iRawData::class));
   }
 
   public function testLoad() : void {

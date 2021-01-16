@@ -39,6 +39,6 @@ final class Folder implements iPersistnace {
   }
 
   private function createFolder() : void {
-    is_dir($this->folder) || mkdir(directory: $this->folder, recursive: true) || throw new SavingFailedException('Could not create folder ' . $this->folder);
+    is_dir($this->folder) || @mkdir(directory: $this->folder, recursive: true) || throw new SavingFailedException('Could not create folder ' . $this->folder);
   }
 }
