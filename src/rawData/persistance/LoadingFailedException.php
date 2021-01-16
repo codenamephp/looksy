@@ -2,6 +2,6 @@
 
 namespace de\codenamephp\looksy\rawData\persistance;
 
-final class LoadingFailedException {
+final class LoadingFailedException extends PersistenceException {
 
 }

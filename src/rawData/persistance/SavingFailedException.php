@@ -2,6 +2,6 @@
 
 namespace de\codenamephp\looksy\rawData\persistance;
 
-final class PersistingFailedException extends \RuntimeException {
+final class SavingFailedException extends PersistenceException {
 
 }
