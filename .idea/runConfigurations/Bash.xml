@@ -3,7 +3,7 @@
     <deployment type="docker-image">
       <settings>
         <option name="imageTag" value="codenamephp/php.webdevops.php-dev:8.0" />
-        <option name="command" value="bash" />
+        <option name="command" value="su application" />
         <option name="containerName" value="" />
         <option name="entrypoint" value="" />
         <option name="commandLineOptions" value="--rm -it" />
