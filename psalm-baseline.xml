@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <files psalm-version="4.x-dev@">
+  <file src="src/rawData/persistance/Folder.php">
+    <InvalidArgument occurrences="1">
+      <code>true</code>
+    </InvalidArgument>
+  </file>
   <file src="src/rawData/xdebug/Collector.php">
     <AssignmentToVoid occurrences="1">
       <code>$this-&gt;lastTraceFilename</code>
