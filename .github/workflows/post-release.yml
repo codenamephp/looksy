@@ -29,7 +29,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Create pull request
-        uses: repo-sync/pull-request@v2
+        uses: repo-sync/pull-request@v2.6
         with:
           source_branch: "release"
           destination_branch: "main"
